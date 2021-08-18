@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  /* Colors - Primary */
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+
+  /* Colors - Neutral */
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+
+  /* Font sizes */
+  --font_md: 0.9rem;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  background: url(../images/pattern-background-mobile.svg) round no-repeat;
+  background-color: var(--paleBlue);
+  color: var(--desaturatedBlue);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  font-family: 'Red Hat Display', sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--darkBlue);
+  margin-bottom: 1.5rem;
+}
+
+b {
+  color: var(--darkBlue);
+}
+
+section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+  font-size: var(--font_md);
+}
+
+section > img {
+  width: 100%;
+}
+
+section .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+  padding-top: 0.5;
+  letter-spacing: 0.01rem;
+}
+
+section .description h2 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+section .description p {
+  text-align: center;
+}
+
+section .plan {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1.5rem;
+  padding: 0.9rem 0.2rem;
+  border-radius: 0.8rem;
+  background-color: var(--veryPaleBlue);
+}
+
+section .plan a {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--brightBlue);
+}
+
+section .plan a:hover {
+  --brightBlue: hsl(245, 75%, 65%);
+  text-decoration: none;
+}
+
+section .buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 1.3rem;
+}
+
+section .buttons button {
+  outline: none;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.03rem;
+  cursor: pointer;
+  background-color: var(--brightBlue);
+  color: var(--veryPaleBlue);
+}
+
+section .buttons button:first-child {
+  background-color: var(--brightBlue);
+  color: var(--veryPaleBlue);
+}
+
+section .buttons button:last-child {
+  margin-top: 0.4rem;
+  background-color: #fff;
+  color: var(--desaturatedBlue);
+}
+
+section .buttons button:first-child:hover {
+  --brightBlue: hsl(245, 75%, 65%);
+}
+
+section .buttons button:last-child:hover {
+  color: var(--darkBlue);
+}
+
+/* Media queries */
+@media only screen and (min-width: 768px) {
+  body {
+    background: url(../images/pattern-background-desktop.svg) round no-repeat;
+    background-color: var(--paleBlue);
+  }
+
+  section {
+    --font_md: 0.8em;
+    width: 28em;
+  }
+
+  section .description {
+    margin-left: 3.3em;
+    margin-right: 3.3em;
+  }
+
+  section .plan,
+  section .buttons {
+    margin-left: 2.8em;
+    margin-right: 2.8em;
+  }
+
+  section .buttons button {
+    padding: 0.95em;
+    font-size: 0.95em;
+  }
+}
